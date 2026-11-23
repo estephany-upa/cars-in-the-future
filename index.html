@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Future Cars — How We'll Drive in 2050</title>
+<meta name="description" content="An animated tour of how cars will look in the future: shapeshifting bodies, solar skins, maglev lanes and flying pods.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a class="logo" href="#top"><span class="logo-dot"></span>FUTURE<b>CARS</b></a>
+  <div class="links">
+    <a href="#timeline">Timeline</a>
+    <a href="#anatomy">Anatomy</a>
+    <a href="#studio">Studio</a>
+    <a href="#city">City</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="grid" aria-hidden="true"><div class="grid-plane"></div></div>
+  <div class="hero-inner">
+    <p class="eyebrow reveal">A speculative tour of the road ahead</p>
+    <h1 class="title" data-split>The Car of 2050</h1>
+    <p class="lede reveal delay-1">No steering wheel. No tailpipe. No wheels, if the lane allows it. Scroll to watch a century of design fold into one machine.</p>
+    <div class="cta reveal delay-2">
+      <a class="btn" href="#timeline">Start the drive</a>
+      <a class="btn ghost" href="#studio">Design yours</a>
+    </div>
+  </div>
+  <div class="hero-car" id="hero-car" aria-hidden="true"></div>
+  <div class="speedlines" aria-hidden="true"></div>
+  <a class="scroll-hint" href="#timeline" aria-label="Scroll down"><span></span></a>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>SOLID-STATE BATTERIES</span><span>MAGLEV LANES</span><span>SOLAR SKIN</span><span>LEVEL-5 AUTONOMY</span><span>V2X MESH</span><span>SELF-HEALING PAINT</span><span>MODULAR CABINS</span><span>eVTOL COMMUTE</span>
+    <span>SOLID-STATE BATTERIES</span><span>MAGLEV LANES</span><span>SOLAR SKIN</span><span>LEVEL-5 AUTONOMY</span><span>V2X MESH</span><span>SELF-HEALING PAINT</span><span>MODULAR CABINS</span><span>eVTOL COMMUTE</span>
+  </div>
+  <div class="track reverse">
+    <span>ADAPTIVE AERO</span><span>WIRELESS ROADS</span><span>HOLOGRAPHIC HUD</span><span>SWARM TRAFFIC</span><span>ZERO EMISSIONS</span><span>LOUNGE INTERIORS</span><span>10-MINUTE CHARGE</span><span>ROAD AS GRID</span>
+    <span>ADAPTIVE AERO</span><span>WIRELESS ROADS</span><span>HOLOGRAPHIC HUD</span><span>SWARM TRAFFIC</span><span>ZERO EMISSIONS</span><span>LOUNGE INTERIORS</span><span>10-MINUTE CHARGE</span><span>ROAD AS GRID</span>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<section class="section" id="timeline">
+  <div class="wrap">
+    <p class="eyebrow reveal">Timeline</p>
+    <h2 class="h2 reveal">Four decades, four reinventions</h2>
+    <div class="timeline">
+      <div class="line"><div class="line-fill"></div></div>
+
+      <article class="era reveal" style="--accent:var(--cyan)">
+        <div class="year">2030</div>
+        <div class="era-icon">
+          <svg viewBox="0 0 100 100"><rect class="battery" x="18" y="34" width="56" height="32" rx="6"/><rect x="74" y="44" width="8" height="12" rx="2" fill="currentColor"/><rect class="charge" x="24" y="40" width="44" height="20" rx="3"/><path class="bolt" d="M52 30 L40 54 h10 l-4 18 l14 -26 h-10 z"/></svg>
+        </div>
+        <div class="era-body">
+          <h3>The software-defined EV</h3>
+          <p>Solid-state packs charge in the time it takes to buy coffee. The dashboard is one sheet of glass. Highway driving is handed to the car, and over-the-air updates make last year's model feel new.</p>
+          <ul class="tags"><li>10-min charging</li><li>Level 3 highways</li><li>Glass cockpit</li></ul>
+        </div>
+      </article>
+
+      <article class="era reveal" style="--accent:var(--violet)">
+        <div class="year">2040</div>
+        <div class="era-icon">
+          <svg viewBox="0 0 100 100"><circle class="orbit" cx="50" cy="50" r="30"/><circle class="orbit o2" cx="50" cy="50" r="18"/><circle cx="50" cy="50" r="6" fill="currentColor"/><circle class="sat" cx="80" cy="50" r="4" fill="currentColor"/></svg>
+        </div>
+        <div class="era-body">
+          <h3>Pods that talk to the city</h3>
+          <p>Steering wheels become an option box. Cabins turn into lounges, offices and bedrooms. Every vehicle shares its intent with every other one, so intersections stop needing lights.</p>
+          <ul class="tags"><li>Robotaxi fleets</li><li>V2X mesh</li><li>Swivel seating</li></ul>
+        </div>
+      </article>
+
+      <article class="era reveal" style="--accent:var(--magenta)">
+        <div class="year">2050</div>
+        <div class="era-icon">
+          <svg viewBox="0 0 100 100"><path class="morph" d="M20 60 C30 30 70 30 80 60 C70 80 30 80 20 60 Z"/></svg>
+        </div>
+        <div class="era-body">
+          <h3>Bodies that change shape</h3>
+          <p>Panels made of programmable composites stretch for highway cruising and tuck in for city parking. Paint heals its own scratches and harvests sunlight. Major corridors get maglev strips, and the wheels fold away.</p>
+          <ul class="tags"><li>Adaptive aero</li><li>Solar skin</li><li>Maglev mode</li></ul>
+        </div>
+      </article>
+
+      <article class="era reveal" style="--accent:var(--lime)">
+        <div class="year">2070</div>
+        <div class="era-icon">
+          <svg viewBox="0 0 100 100"><g class="rotor"><line x1="50" y1="20" x2="50" y2="80"/><line x1="20" y1="50" x2="80" y2="50"/></g><rect class="podbody" x="34" y="42" width="32" height="18" rx="9"/></svg>
+        </div>
+        <div class="era-body">
+          <h3>The car leaves the road</h3>
+          <p>Commuter pods lift off from rooftop pads and land in your driveway. The cabin unclips from the chassis and docks to your house as a room. "Car" becomes a verb for whatever moves you.</p>
+          <ul class="tags"><li>eVTOL pods</li><li>Swappable cabins</li><li>Vehicle as room</li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap stat-grid">
+    <div class="stat reveal"><div class="num" data-count="0">0</div><div class="lbl">tailpipes</div></div>
+    <div class="stat reveal delay-1"><div class="num" data-count="10" data-suffix=" min">0</div><div class="lbl">to full charge</div></div>
+    <div class="stat reveal delay-2"><div class="num" data-count="1200" data-suffix=" km">0</div><div class="lbl">range on one pack</div></div>
+    <div class="stat reveal delay-3"><div class="num" data-count="100" data-suffix="%">0</div><div class="lbl">of the roof is a solar panel</div></div>
+  </div>
+</section>
+
+<!-- ANATOMY -->
+<section class="section" id="anatomy">
+  <div class="wrap">
+    <p class="eyebrow reveal">Anatomy</p>
+    <h2 class="h2 reveal">Pull it apart</h2>
+    <p class="sub reveal delay-1">Hover the pulsing points to inspect each system. The car explodes into layers as it enters the screen.</p>
+    <div class="anatomy reveal delay-2" id="anatomy-stage">
+      <div class="anatomy-car" id="anatomy-car"></div>
+      <button class="hot" style="left:52%;top:30%" data-part="canopy"><i></i><span class="tip"><b>Adaptive canopy</b>Electrochromic glass that goes from clear to opaque to a 360° display in a blink.</span></button>
+      <button class="hot" style="left:30%;top:46%" data-part="body"><i></i><span class="tip"><b>Solar skin</b>Every square centimetre of paint is a photovoltaic cell that heals its own scratches overnight.</span></button>
+      <button class="hot" style="left:88%;top:62%" data-part="light"><i></i><span class="tip"><b>Light language</b>A full-width light strip talks to pedestrians: colour, pulse and direction replace the horn.</span></button>
+      <button class="hot" style="left:26%;top:78%" data-part="wheels"><i></i><span class="tip"><b>Fold-away wheels</b>In-hub motors on streets; on maglev corridors they retract and the car floats on magnetic pads.</span></button>
+      <button class="hot" style="left:66%;top:60%" data-part="core"><i></i><span class="tip"><b>AI core</b>A liquid-cooled brain the size of a shoebox runs the drive, the cabin and the conversation.</span></button>
+    </div>
+    <div class="anatomy-controls reveal delay-3">
+      <button class="btn small" id="explode-btn">Assemble</button>
+    </div>
+  </div>
+</section>
+
+<!-- STUDIO -->
+<section class="section" id="studio">
+  <div class="wrap">
+    <p class="eyebrow reveal">Design studio</p>
+    <h2 class="h2 reveal">Build your 2050 ride</h2>
+    <div class="studio reveal delay-1">
+      <div class="studio-stage" id="studio-stage" data-mode="wheels">
+        <div class="studio-floor"></div>
+        <div class="studio-car" id="studio-car"></div>
+      </div>
+      <div class="studio-panel">
+        <div class="ctrl">
+          <label>Body colour</label>
+          <div class="swatches" id="swatches">
+            <button style="--c:#22e5ff" data-c="#22e5ff" class="on" aria-label="Cyan"></button>
+            <button style="--c:#ff2bd6" data-c="#ff2bd6" aria-label="Magenta"></button>
+            <button style="--c:#b6ff3b" data-c="#b6ff3b" aria-label="Lime"></button>
+            <button style="--c:#ff8a3b" data-c="#ff8a3b" aria-label="Orange"></button>
+            <button style="--c:#f2f4ff" data-c="#f2f4ff" aria-label="Pearl"></button>
+            <button style="--c:#7c4dff" data-c="#7c4dff" aria-label="Violet"></button>
+          </div>
+        </div>
+        <div class="ctrl">
+          <label>Drive mode</label>
+          <div class="seg" id="modes">
+            <button data-mode="wheels" class="on">Wheels</button>
+            <button data-mode="maglev">Maglev</button>
+            <button data-mode="flight">Flight</button>
+          </div>
+        </div>
+        <div class="ctrl">
+          <label>Ride height <output id="hover-out">12</output> cm</label>
+          <input type="range" id="hover" min="0" max="60" value="12">
+        </div>
+        <div class="ctrl">
+          <label>Canopy tint <output id="tint-out">35</output>%</label>
+          <input type="range" id="tint" min="10" max="90" value="35">
+        </div>
+        <div class="ctrl row">
+          <label class="switch"><input type="checkbox" id="lights" checked><span></span>Light language</label>
+          <label class="switch"><input type="checkbox" id="solar" checked><span></span>Solar skin</label>
+        </div>
+        <div class="readout" id="readout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CITY -->
+<section class="section city-section" id="city">
+  <div class="wrap">
+    <p class="eyebrow reveal">The city</p>
+    <h2 class="h2 reveal">Traffic without traffic lights</h2>
+    <p class="sub reveal delay-1">When every vehicle broadcasts where it is going, the city becomes a single choreographed swarm.</p>
+  </div>
+  <div class="city" id="city-stage" aria-hidden="true">
+    <div class="skyline" id="skyline"></div>
+    <div class="road-strip"></div>
+    <div class="fliers" id="fliers"></div>
+    <div class="streetcars" id="streetcars"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="logo"><span class="logo-dot"></span>FUTURE<b>CARS</b></div>
+    <p>A speculative concept site. Every number and feature here is a guess about the future, not a product.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
